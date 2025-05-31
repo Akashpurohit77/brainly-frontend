@@ -5,9 +5,9 @@ import { CreateContentModel } from "../components/CreateContentModel"
 import { PlusIcon } from "../icons/PlusIcon"
 import { ShareIcon } from "../icons/ShareIcon"
 import { Sidebar } from "../components/Sidebar"
-// import { useContent } from "../hooks/useContent"
-// import { BACKEND_URL } from "../config"
-// import axios from "axios"
+import { useContent } from "../hooks/useContent"
+import { BACKEND_URL } from "../config"
+import axios from "axios"
 
 export function Dashboard() {
   const [modalOpen, setModalOpen] = useState(false);

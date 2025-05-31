@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import { CrossIcon } from "../icons/CrossIcon";
 import { Button } from "./Button";
-// import { Input } from "./Input";
-// import { BACKEND_URL } from "../config";
-// import axios from "axios";
+import { Input } from "./Input";
+import { BACKEND_URL } from "../config";
+import axios from "axios";
 
 enum ContentType {
     Youtube = "youtube",
@@ -12,8 +12,8 @@ enum ContentType {
 
 // controlled component
 export function CreateContentModel({open, onClose}) {
-    const titleRef = useRef<HTMLInputElement>();
-    const linkRef = useRef<HTMLInputElement>();
+    const titleRef = useRef<HTMLInputElement>(null);
+    const linkRef = useRef<HTMLInputElement>(null);
     const [type, setType] = useState(ContentType.Youtube);
 
     async function addContent() {
